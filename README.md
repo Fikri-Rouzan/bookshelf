@@ -10,4 +10,4 @@ Bookshelf App was the final project I worked on to complete the Belajar Membuat 
 Technologies Used:
 - Programming Languages: HTML, JavaScript, and CSS.
 - Software: Visual Studio Code and GitHub.
-- Deployment: GitHub Pages
+- Deployment: GitHub Pages.
