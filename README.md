@@ -1,13 +1,19 @@
+# Bookshelf
+
+## About Bookshelf
+
 Bookshelf App was the final project I worked on to complete the Belajar Membuat Front-End Web untuk Pemula class from Dicoding. The features on this website included:
 
-- Add Books: Users can write the title, author, and year of the book to be added to the bookshelf. There is also a checkbox option for finished reading if the user wants to add the book to the finished reading bookshelf, otherwise the book will be added to the unfinished reading bookshelf.
-- Search for Books: Users can search for books in the bookshelf by the book title.
-- Edit Books: Users can edit the title, author, and year of the book if there is incorrect information when it was added to the bookshelf.
-- Update the Status of Books: Users can change the status of a book from unfinished to finished when the book has been read, and vice versa.
-- Delete Books: Users can delete a book from the bookshelf.
-- Responsive: Optimized for both mobile and desktop use, ensuring a smooth experience across all devices.
+## Features
 
-Technologies Used:
+- Adding Books: Users can add a new book to the bookshelf by typing the book's title, author, and publication year.
+- Searching for Books: Users can search for a specific book on the bookshelf based on the book's title.
+- Changing Book Information: Users can update the book's information by typing the new title, author, and publication year.
+- Update Reading Status: Users can update the reading status of a book to indicate whether it has been completed or is still being read.
+- Deleting Books: Users can delete a book from the bookshelf.
+
+## Technologies Used
+
 - Programming Languages: HTML, JavaScript, and CSS.
 - Software: Visual Studio Code and GitHub.
-- Deployment: GitHub Pages.
+- Deployment: Netlify.

@@ -3,44 +3,55 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookshelf App</title>
+    <title>Bookshelf</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header class="header">
-      <h1>Bookshelf App</h1>
+      <h1>Bookshelf</h1>
     </header>
 
     <main>
       <section class="book_input">
-        <h2>Tambah Buku Baru</h2>
+        <h2>Tambahkan Buku Baru</h2>
         <form id="bookForm" data-testid="bookForm">
           <div class="input">
-            <label for="bookFormTitle">Judul</label>
+            <label for="bookFormTitle">Judul Buku</label>
             <input
               id="bookFormTitle"
               type="text"
               required
               data-testid="bookFormTitleInput"
+              placeholder="Ketikkan judul buku"
             />
           </div>
           <div class="input">
-            <label for="bookFormAuthor">Penulis</label>
+            <label for="bookFormAuthor">Penulis Buku</label>
             <input
               id="bookFormAuthor"
               type="text"
               required
               data-testid="bookFormAuthorInput"
+              placeholder="Ketikkan penulis buku"
             />
           </div>
           <div class="input">
-            <label for="bookFormYear">Tahun</label>
+            <label for="bookFormYear">Tahun Terbit Buku</label>
             <input
               id="bookFormYear"
               type="number"
               required
               data-testid="bookFormYearInput"
+              placeholder="Ketikkan tahun terbit buku"
             />
           </div>
           <div class="input_check">
@@ -56,7 +67,8 @@
             type="submit"
             data-testid="bookFormSubmitButton"
           >
-            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+            Masukkan Buku ke rak
+            <span id="statusText">Belum selesai dibaca</span>
           </button>
         </form>
       </section>
@@ -65,11 +77,12 @@
         <h2>Cari Buku</h2>
         <form id="searchBook" data-testid="searchBookForm">
           <div class="search">
-            <label for="searchBookTitle">Judul</label>
+            <i class="fas fa-search search-icon"></i>
             <input
               id="searchBookTitle"
               type="text"
               data-testid="searchBookFormTitleInput"
+              placeholder="Ketikkan judul buku yang ingin dicari"
             />
           </div>
           <button
@@ -77,7 +90,7 @@
             type="submit"
             data-testid="searchBookFormSubmitButton"
           >
-            Cari
+            Cari Buku
           </button>
         </form>
       </section>
