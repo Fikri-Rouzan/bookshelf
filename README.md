@@ -2,7 +2,7 @@
 
 ## About Bookshelf
 
-Bookshelf App was the final project I worked on to complete the Belajar Membuat Front-End Web untuk Pemula class from Dicoding. The features on this website included:
+Bookshelf is a website where users can store a list of books they want to keep and read.
 
 ## Features
 
