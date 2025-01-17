@@ -17,5 +17,5 @@ Bookshelf is a website where users can store a list of books they want to keep a
 - Programming Language: JavaScript.
 - Markup Language: HTML.
 - Stylesheet Language: CSS.
-- Software: Visual Studio Code and GitHub.
+- Software: Visual Studio Code.
 - Deployment: Netlify.
