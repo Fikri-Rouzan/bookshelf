@@ -136,10 +136,12 @@
     </main>
 
     <footer>
-      <h4>(Dicoding) Belajar Membuat Front-End Web untuk Pemula &copy 2024</h4>
-      <h4>Muhammad Fikri Rouzan Ash Shidik</h4>
+      <h4>&copy <span id="year"></span> Muhammad Fikri Rouzan Ash Shidik</h4>
     </footer>
 
     <script src="src/main.js"></script>
+    <script>
+      document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
   </body>
 </html>
