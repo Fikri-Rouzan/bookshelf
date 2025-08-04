@@ -2,6 +2,7 @@ document
   .querySelector('[data-testid="bookFormIsCompleteCheckbox"]')
   .addEventListener("change", function () {
     const statusText = document.getElementById("statusText");
+
     if (this.checked) {
       statusText.textContent = "Selesai dibaca";
     } else {
@@ -16,8 +17,10 @@ const STORAGE_KEY = "BOOKSHELF_APPS";
 function isStorageAvailable() {
   if (typeof Storage === "undefined") {
     alert("Browser Anda tidak mendukung local storage");
+
     return false;
   }
+
   return true;
 }
 
@@ -30,11 +33,13 @@ function saveBooksToStorage() {
 function loadBooksFromStorage() {
   if (isStorageAvailable()) {
     const storedBooks = localStorage.getItem(STORAGE_KEY);
+
     if (storedBooks) {
       books = JSON.parse(storedBooks).map((book) => ({
         ...book,
         year: Number(book.year),
       }));
+
       renderBooks();
     }
   }
@@ -44,6 +49,7 @@ function renderBooks(filteredBooks = null) {
   const incompleteBookshelfList = document.querySelector(
     '[data-testid="incompleteBookList"]'
   );
+
   const completeBookshelfList = document.querySelector(
     '[data-testid="completeBookList"]'
   );
@@ -55,6 +61,7 @@ function renderBooks(filteredBooks = null) {
 
   for (const book of displayBooks) {
     const bookElement = createBookElement(book);
+
     if (book.isComplete) {
       completeBookshelfList.appendChild(bookElement);
     } else {
@@ -94,7 +101,9 @@ function createBookElement(book) {
     const confirmationMessage = isComplete
       ? `Ingin memindahkan buku "${book.title}" ke rak belum selesai dibaca?`
       : `Ingin memindahkan buku "${book.title}" ke rak selesai dibaca?`;
+
     const confirmation = confirm(confirmationMessage);
+
     if (confirmation) {
       toggleBookCompletion(id);
     }
@@ -123,15 +132,19 @@ function createBookElement(book) {
 function addBook(title, author, year, isComplete) {
   const id = +new Date();
   const newBook = { id, title, author, year: Number(year), isComplete };
+
   books.push(newBook);
+
   saveBooksToStorage();
   renderBooks();
 }
 
 function deleteBook(bookId) {
   const book = books.find((book) => book.id === bookId);
+
   if (book) {
     const confirmation = confirm(`Ingin menghapus buku "${book.title}"?`);
+
     if (confirmation) {
       books = books.filter((book) => book.id !== bookId);
       saveBooksToStorage();
@@ -142,6 +155,7 @@ function deleteBook(bookId) {
 
 function toggleBookCompletion(bookId) {
   const book = books.find((book) => book.id === bookId);
+
   if (book) {
     book.isComplete = !book.isComplete;
     saveBooksToStorage();
@@ -151,6 +165,7 @@ function toggleBookCompletion(bookId) {
 
 function editBook(bookId) {
   const book = books.find((book) => book.id === bookId);
+
   if (book) {
     const confirmation = confirm(
       `Ingin mengubah informasi buku "${book.title}"?`
@@ -165,6 +180,7 @@ function editBook(bookId) {
         book.title = newTitle;
         book.author = newAuthor;
         book.year = Number(newYear);
+
         saveBooksToStorage();
         renderBooks();
       }
@@ -176,6 +192,7 @@ function searchBooks(query) {
   const filteredBooks = books.filter((book) =>
     book.title.toLowerCase().includes(query.toLowerCase())
   );
+
   renderBooks(filteredBooks);
 }
 
@@ -187,12 +204,15 @@ document
     const title = document.querySelector(
       '[data-testid="bookFormTitleInput"]'
     ).value;
+
     const author = document.querySelector(
       '[data-testid="bookFormAuthorInput"]'
     ).value;
+
     const year = document.querySelector(
       '[data-testid="bookFormYearInput"]'
     ).value;
+
     const isComplete = document.querySelector(
       '[data-testid="bookFormIsCompleteCheckbox"]'
     ).checked;

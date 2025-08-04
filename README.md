@@ -1,21 +1,21 @@
 # Bookshelf
 
-## About Bookshelf
+## ℹ️ About
 
-Bookshelf is a website where users can store a list of books they want to keep and read.
+Bookshelf is a web application designed for users to organize and track the books they are currently reading or wish to read in the future.
 
-## Features
+## ✨ Features
 
-- Adding Books: Users can add a new book to the bookshelf by typing the book's title, author, and publication year.
-- Searching for Books: Users can search for a specific book on the bookshelf based on the book's title.
-- Changing Book Information: Users can update the book's information by typing the new title, author, and publication year.
-- Update Reading Status: Users can update the reading status of a book to indicate whether it has been completed or is still being read.
-- Deleting Books: Users can delete a book from the bookshelf.
+- ➕ Add New Book: Users can easily add a new book to their library by providing its title, author, and year of publication.
+- 🔎 Search Library: A search function allows users to quickly find any book in their collection by its title.
+- ✏️ Edit Book Details: Users can update the information for any book, including its title, author, or publication year.
+- 🔄 Move Between Shelves: Users can update a book's reading status by moving it between the 'Finished' and 'Unread' shelves.
+- 🗑️ Remove Book: Users can permanently delete a book entry from their library.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- Programming Language: JavaScript.
-- Markup Language: HTML.
-- Stylesheet Language: CSS.
-- Software: Visual Studio Code.
-- Deployment: Netlify.
+- 🌐 Programming Language: JavaScript.
+- 📄 Markup Language: HTML.
+- 🎨 Stylesheet Language: CSS.
+- 💻 Software: Visual Studio Code.
+- 🚀 Deployment: Netlify.

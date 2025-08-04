@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/public/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>Bookshelf</title>
-    <link rel="icon" href="src/Logo.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="src/style.css" />
   </head>
-
   <body>
     <header class="header">
       <h1>Bookshelf</h1>
@@ -50,6 +48,7 @@
             <input
               id="bookFormYear"
               type="number"
+              min="0"
               required
               data-testid="bookFormYearInput"
               placeholder="Ketikkan tahun terbit buku"
@@ -140,6 +139,7 @@
     </footer>
 
     <script src="src/main.js"></script>
+
     <script>
       document.getElementById("year").innerText = new Date().getFullYear();
     </script>
